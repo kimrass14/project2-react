@@ -11,7 +11,7 @@ I want to develop a site where a user can search and/or filter on a list of char
 
 ## API
 
-[Active API link] (https://api.globalgiving.org/api/public/projectservice/featured/projects?api_key=df250065-c194-49e4-a1b9-3f35d4abf54c)
+[Active API link](https://api.globalgiving.org/api/public/projectservice/featured/projects?api_key=df250065-c194-49e4-a1b9-3f35d4abf54c)
  - The data is for 10 featured projects that are refreshed hourly. The data includes information on the purpose of the project, location, a link to more details, etc.
 
 ```
