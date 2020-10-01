@@ -2,20 +2,45 @@
 
 ## Project Links
 
-- [add your github repo link]()
+- [My github repo link](https://github.com/kimrass14/project2-react)
 - [add your deployment link]()
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+I want to develop a site where a user can search and/or filter on a list of charity projects and non-profit organizations. They can click on an an organization of interest to learn more and find out how the user can donate to the cause. User can save their favorite organizations to revisit.
 
 ## API
 
-Use this section to include info about the API you have chosen and a code snippet of the data that it returns and is required for your project. 
-
+[Active API link] (https://api.globalgiving.org/api/public/projectservice/featured/projects?api_key=df250065-c194-49e4-a1b9-3f35d4abf54c)
+ - The data is for 10 featured projects that are refreshed hourly. The data includes information on the purpose of the project, location, a link to more details, etc.
 
 ```
-{data: {} }
+<projects numberFound="10">
+<project>
+<active>true</active>
+<activities>All donations to this fund will support relief and recovery efforts for Californians affected by the 2020 wildfires. Initially, the fund will help first responders meet survivors' immediate needs for food, fuel, clean water, medicine, and shelter. The fund will transition to support longer-term recovery efforts run by local, vetted organizations in the region. We monitor the impact on affected communities and work with partners on the ground to allocate funds to where they're needed most.</activities>
+<additionalDocumentation>https://www.globalgiving.org/pfil/48572/projdoc.pdf</additionalDocumentation>
+<approvedDate>2020-08-20T11:59:58-04:00</approvedDate>
+<contactAddress>1110 Vermont Ave NW Ste 550</contactAddress>
+<contactCity>Washingtonz</contactCity>
+<contactCountry>United States</contactCountry>
+<contactName>Sandrina da Cruz</contactName>
+<contactPostal>20005</contactPostal>
+<contactState>DC</contactState>
+<contactUrl>https://www.globalgiving.org</contactUrl>
+<countries>
+<country>
+<iso3166CountryCode>US</iso3166CountryCode>
+<name>United States</name>
+</country>
+</countries>
+<country>United States</country>
+<dateOfMostRecentReport>2020-06-16T17:17:45-04:00</dateOfMostRecentReport>
+<donationOptions>
+<donationOption>
+<amount>35</amount>
+<description>emergency wildfire relief and long-term recovery support</description>
+</donationOption>
 ```
 
 
