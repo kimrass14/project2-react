@@ -12,11 +12,17 @@ I want to develop a news app that will allow users to see headlines upon inital 
 ## API
 
 [News API - US Top Headlines link](https://newsapi.org/v2/top-headlines?country=us&apiKey=55b8ac4b6e5941b4b92ffeaa3700fe53)
+
 [News API - US Business link](https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=55b8ac4b6e5941b4b92ffeaa3700fe53)
+
 [News API - US Entertainment link](https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=55b8ac4b6e5941b4b92ffeaa3700fe53)
+
 [News API - US Health link](https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=55b8ac4b6e5941b4b92ffeaa3700fe53)
+
 [News API - US Science link](https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=55b8ac4b6e5941b4b92ffeaa3700fe53)
+
 [News API - US Sports link](https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=55b8ac4b6e5941b4b92ffeaa3700fe53)
+
 [News API - US Tech link](https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=55b8ac4b6e5941b4b92ffeaa3700fe53)
 
 ```
