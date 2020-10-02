@@ -73,13 +73,19 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP
-- Find and use external api 
-- Render data on page 
-- Allow user to interact with the page
+- Confirm retrieval of API data
+- Render listing of news article previews
+- Create two routes / links to Homepage component and Saved articles component
+- onClick of Bookmark button, saves article and pushes to a separate Saved articles component
+- Saved articles component renders listing of bookmarked articles
+- onClick of article preview, link to FullArticle component
+- onClick of category, re-render of news listing
+- Create mobile first and make responsive
+- Deploy site to Netlify
 
 #### PostMVP EXAMPLE
 
-- Add localStorage or firebase for storage
+- Add another component containing a form to conduct keyword searches and return results
 
 ## Components
 ##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
