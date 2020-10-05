@@ -3,7 +3,7 @@
 ## Project Links
 
 - [My github repo link](https://github.com/kimrass14/project2-react)
-- [add your deployment link]()
+- [My netlify link](https://project-2-react.netlify.app/)
 
 ## Project Description
 
@@ -65,7 +65,7 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 
 - [Mobile wireframes](https://res.cloudinary.com/dzxytz23k/image/upload/v1601663309/SEI%20-%20Project%202/IMG-3794_so8m9z.jpg)
 - [Laptop wireframe](https://res.cloudinary.com/dzxytz23k/image/upload/v1601663309/SEI%20-%20Project%202/IMG-3795_idmfjl.jpg)
-- [Architecture](https://docs.google.com/drawings/d/1pzxqIVePfGaewHMTGc26Aj93EXsJi5kyexUHAKjm7Bk/edit?usp=sharing)
+- [Architecture](https://docs.google.com/drawings/d/1iy7YauR9sp2b4lV-bjIHMD1sanXL0K9Yw-xD2r5Xfxc/edit?usp=sharing)
 
 
 ### MVP/PostMVP - 5min
@@ -74,18 +74,18 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 #### MVP
 - Confirm retrieval of API data
-- Render listing of news article previews
-- Create two routes / links to Homepage component and Saved articles component
-- onClick of Bookmark button, saves article and pushes to a separate Saved articles component
-- Saved articles component renders listing of bookmarked articles
-- onClick of article preview, link to FullArticle component
-- onClick of category, re-render of news listing
+- Render news article previews (image, title, source)
+- In navigation, create routes / links to Homepage component and each of the seven categories
+- onClick of a category, re-render of corresponding news listing
+- onClick of article preview, link to Full Article component
 - Create mobile first and make responsive
 - Deploy site to Netlify
 
-#### PostMVP EXAMPLE
+#### PostMVP
 
 - Add another component containing a form to conduct keyword searches and return results
+- Add bookmark button to article preview that saves article and pushes to Saved articles component
+- Saved articles component renders listing of bookmarked articles
 
 ## Components
 ##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
@@ -94,18 +94,37 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 | Component | Description | 
 | --- | :---: |  
-| App | This will make the initial data pull and include React Router| 
-| Header | This will render the header include the nav | 
-| Footer | This will render the header include the nav | 
+| App | This will be the parent component to the seven category components and homepage component. Will contain navigation bar.|
+| Homepage | Stateful and fetch headline news API |
+| Business | Stateful and fetch business news API | 
+| Entertainment | Stateful and fetch entertainment news API |
+| Health | Stateful and fetch health news API | 
+| Science | Stateful and fetch science news API |
+| Sports | Stateful and fetch sports news API | 
+| Tech | Stateful and fetch tech news API | 
+| NewsListing | Stateful and renders listing of article previews based on which category is clicked on |
+| Tile | Stateful and renders preview of individual article, including image, title and source |
+| Article | Stateful and renders the full article of tile that was clicked on| 
 
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Creating structure of components and linking | H | 2hrs| hrs | hrs |
+| Navigation bar | H | 3hrs| hrs | hrs |
+| Homepage component | H | 1hr| hrs | hrs |
+| Business component | H | 1hr| hrs | hrs |
+| Entertainment component | H | 1hr| hrs | hrs |
+| Health component | H | 1hr| hrs | hrs |
+| Science component | H | 1hr| hrs | hrs |
+| Sports component | H | 1hr| hrs | hrs |
+| Tech component | H | 1hr| hrs | hrs |
+| NewsListings component | H | 2hr| hrs | hrs |
+| Tile component | H | 2hr| hrs | hrs |
+| Article component | H | 2hr| hrs | hrs |
+| onClick of categories rendering news list extra time | H | 2hr| hrs | hrs |
+| Responsiveness from mobile to laptop | H | 3hrs| hrs | hrs |
+| Styling | H | 4hrs| hrs | hrs |
+| Total | H | 27hrs| hrs | hrs |
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
