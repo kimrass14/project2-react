@@ -1,24 +1,29 @@
-import React, { useState } from 'react'
+import React from 'react'
+import './list.css'
 
-const NewsList = () => {
-    const [list, setList] = useState([])
+const NewsList = (props) => {
+    console.log('news list', props)
 
-    const makeApiCall = async () => {
-        const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=55b8ac4b6e5941b4b92ffeaa3700fe53`)
-        const json = await res.json()
-        const newsArr = json.articles
-        setList(newsArr)
-    }
-    makeApiCall()
+    const handleClick = (url) => {window.location = url}
+
+    // React.useEffect(() => {
+    //     handleClick()
+    // }, [])
 
     let showNews = ''
-    if (list[0]) {
-        showNews = list.map(item => {
-            return <div>{item.title}</div>
+    if (props.list[0]) {
+        showNews = props.list.map((item, index) => {
+            return (
+                <div className="preview" key={index} onClick={() => {handleClick(item.url)}}>
+                    <img src={item.urlToImage} alt="image"/>
+                    <p>{item.title}</p>
+                
+                </div>
+            )
         })
     }
 
-    return <div>{showNews}</div>
+    return <div className="newsContainer">{showNews}</div>
 
 }
 export default NewsList
