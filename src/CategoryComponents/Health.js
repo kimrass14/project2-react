@@ -18,7 +18,10 @@ const Health = () => {
 
     return (
         <>
-            <NewsList list={list} />
+            <h4>Health</h4>
+            <div className="cat-list-container">
+                <NewsList list={list} />
+            </div>
         </>
     )
 }

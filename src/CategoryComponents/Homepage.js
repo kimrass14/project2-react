@@ -19,11 +19,10 @@ const Homepage = () => {
 
     return(
         <>
-        {/* <h4>Headlines</h4> */}
-        <div className="headlines">
-            <NewsList list={list}/>
-        </div>
-        
+            <h4> Top Headlines</h4>
+            <div className="cat-list-container">
+                <NewsList list={list}/>
+            </div>
         </>
     )
 }

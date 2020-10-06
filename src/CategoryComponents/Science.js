@@ -18,7 +18,10 @@ const Science = () => {
 
     return (
         <>
-            <NewsList list={list} />
+            <h4>Science</h4>
+            <div className="cat-list-container">
+                <NewsList list={list} />
+            </div>
         </>
     )
 }

@@ -18,9 +18,12 @@ const Business = () => {
 
 
     return (
-        <div>
-            <NewsList list={list} />
-        </div>
+        <>
+            <h4>Business</h4>
+            <div className="cat-list-container">
+                <NewsList list={list}/>
+            </div>
+        </>
     )
 }
 export default Business

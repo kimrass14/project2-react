@@ -18,7 +18,10 @@ const Entertainment = () => {
 
     return (
         <>
-            <NewsList list={list} />
+            <h4>Entertainment</h4>
+            <div className="cat-list-container">
+                <NewsList list={list} />
+            </div>
         </>
     )
 }

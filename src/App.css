@@ -1,13 +1,12 @@
-body {
-  width: 425px;
-}
+
 header {
   width: 100%;
   font-family: 'PT Sans Narrow', sans-serif;
   position: fixed;
+  top: 0;
+  /* why is height only including header-title and not navContainer? */
 }
 .header-title {
-  width: 425px;
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -27,7 +26,7 @@ header h2 {
 }
 
 .navContainer {
-  width: 425px;
+  width: 100%;
   background-color: #00A896;
   padding: 10px;
   display: flex;
@@ -47,5 +46,8 @@ h3.navtext {
   padding: 0;
 }
 .main {
-  top: 100px;
+  margin-top: 120px;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: 'PT Sans Narrow', sans-serif;
 }

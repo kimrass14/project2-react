@@ -18,7 +18,10 @@ const Tech = () => {
 
     return (
         <>
-            <NewsList list={list} />
+            <h4>Tech</h4>
+            <div className="cat-list-container">
+                <NewsList list={list} />
+            </div>
         </>
     )
 }
