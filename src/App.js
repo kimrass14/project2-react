@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import {Link, Route} from 'react-router-dom'
 
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap'
+import { Navbar, Nav, Dropdown} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import Homepage from './CategoryComponents/Homepage'
@@ -24,30 +24,29 @@ function App() {
 
 
   return (
-    <>
-      <header className="head">
-        <h1>Your News</h1>
-        <h2>{currentDate}</h2>
+<>
+      <header>
+          <div className="header-title">
+            <h1>Your News</h1>
+            <h2>{currentDate}</h2>
+          </div>
+          <nav className="navContainer">
+            <Dropdown>
+              <Dropdown.Toggle variant="gray-dark" id="dropdown-basic">Category</Dropdown.Toggle>
+              <Dropdown.Menu>
+              <Dropdown.Item as={Link} to="/business" href="#/action-1">Business</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/health" href="#/action-2">Health</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/science" href="#/action-3">Science</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/tech" href="#/action-3">Tech</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/entertainment" href="#/action-3">Entertainment</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/sports" href="#/action-3">Sports</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Link to="/"><h3 className="navtext">Home</h3></Link>
+          </nav>
       </header>
-      <Navbar bg="light">
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link as={Link} to="/" href="#home">Home</Nav.Link>
-            
-            <NavDropdown title="Category" id="basic-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/business" href="#action/3.1">Business</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/health" href="#action/3.2">Health</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/science" href="#action/3.3">Science</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/tech" href="#action/3.4">Tech</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/entertainment" href="#action/3.5">Entertainment</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/sports" href="#action/3.6">Sports</NavDropdown.Item>
-            </NavDropdown>
 
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-      <div className="App">
+      <div className="main">
         <Route exact path="/">
           <Homepage />
         </Route>

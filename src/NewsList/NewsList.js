@@ -4,7 +4,10 @@ import './list.css'
 const NewsList = (props) => {
     console.log('news list', props)
 
-    const handleClick = (url) => {window.location = url}
+    const handleClick = (url) => { 
+        // console.log('newlist', url)
+        window.location.assign(url)
+    }
 
     // React.useEffect(() => {
     //     handleClick()
@@ -14,10 +17,10 @@ const NewsList = (props) => {
     if (props.list[0]) {
         showNews = props.list.map((item, index) => {
             return (
-                <div className="preview" key={index} onClick={() => {handleClick(item.url)}}>
-                    <img src={item.urlToImage} alt="image"/>
-                    <p>{item.title}</p>
-                
+                <div className="preview" key={index} onClick={() => { handleClick(item.url) }}>
+                    <img src={item.urlToImage} alt="newsimage"/>
+                    <p className="title">{item.title}</p>
+                    <p className="source">{item.source.name}</p>
                 </div>
             )
         })

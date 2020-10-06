@@ -1,12 +1,49 @@
-header.head {
-  display: flex;
-  justify-content: space-between
+body {
+  width: 425px;
 }
+header {
+  width: 100%;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+.header-title {
+  width: 425px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  background-color: #00A896;
+
+}
+
 header h1 {
   font-size: 30px;
+  font-weight: 700;
+  margin: 0;
 }
 header h2 {
   font-size: 20px;
-  margin-left: 20px;
+  margin: 0;
   align-self: center;
+}
+
+.navContainer {
+  width: 425px;
+  background-color: #00A896;
+  padding: 10px;
+  display: flex;
+  position: fixed;
+}
+.navContainer a {
+  align-self: center;
+}
+
+h3.navtext {
+  color: black;
+  font-size: 20px;
+  margin: 0 10px 0 10px;
+}
+.navContainer .btn {
+  font-size: 20px;
+  padding: 0;
 }
