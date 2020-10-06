@@ -1,3 +1,9 @@
-.headlines {
-  
+@media (min-width: 768px) {
+    h4 {
+        font-size: 30px;
+    }
+    .cat-list-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }

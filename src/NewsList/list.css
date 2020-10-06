@@ -10,7 +10,7 @@ img.image {
     object-fit: cover;
 }
 .article-info {
-    width: 70%;
+    /* width: 70%; */
     height: 100%;
     margin-left: 10px;
 }
@@ -21,4 +21,44 @@ img.image {
 }
 .source {
     margin: 5px 0px;
+}
+.description {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .preview {
+        height: 150px;
+    }
+    img.image {
+        width: 40%;
+    }
+}
+@media (min-width: 1024px) {
+    .preview{
+        width: 300px;
+        height: 450px;
+        display: block;
+        background-color: #D6D6D6;
+        padding: 15px;
+    }
+    img.image {
+        height: 50%;
+        width: 100%;
+    }
+    .article-info {
+        height: 50%;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    .description {
+        display: block;
+        margin: 0;
+        white-space: wrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .title {
+        font-size: 20px;
+    }
 }
