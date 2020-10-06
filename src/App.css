@@ -70,5 +70,7 @@ h3.navtext {
   }
 }
 @media (min-width: 1024px) {
-
+  div.dropdown {
+    display: none;
+  }
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import NewsList from '../NewsList/NewsList'
+import RespCatTiles from '../ResponsiveCategory/RespCatTiles'
 
 const Entertainment = () => {
     const [list, setList] = useState([])
@@ -19,8 +20,11 @@ const Entertainment = () => {
     return (
         <>
             <h4>Entertainment</h4>
-            <div className="cat-list-container">
-                <NewsList list={list} />
+            <div className="res-cat-container">
+                <RespCatTiles />
+                <div className="cat-list-container">
+                    <NewsList list={list} />
+                </div>
             </div>
         </>
     )
