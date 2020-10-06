@@ -4,14 +4,13 @@ body {
 header {
   width: 100%;
   font-family: 'PT Sans Narrow', sans-serif;
+  position: fixed;
 }
 .header-title {
   width: 425px;
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  position: fixed;
-  top: 0;
   background-color: #00A896;
 
 }
@@ -46,4 +45,7 @@ h3.navtext {
 .navContainer .btn {
   font-size: 20px;
   padding: 0;
+}
+.main {
+  top: 100px;
 }

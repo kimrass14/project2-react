@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import NewsList from '../NewsList/NewsList'
+import './categories.css'
 
 const Homepage = () => {
     const [list, setList] = useState([])
@@ -18,7 +19,11 @@ const Homepage = () => {
 
     return(
         <>
+        {/* <h4>Headlines</h4> */}
+        <div className="headlines">
             <NewsList list={list}/>
+        </div>
+        
         </>
     )
 }

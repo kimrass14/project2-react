@@ -18,7 +18,7 @@ const NewsList = (props) => {
         showNews = props.list.map((item, index) => {
             return (
                 <div className="preview" key={index} onClick={() => { handleClick(item.url) }}>
-                    <img src={item.urlToImage} alt="newsimage"/>
+                    <img className="image" src={item.urlToImage} alt="newsimage"/>
                     <p className="title">{item.title}</p>
                     <p className="source">{item.source.name}</p>
                 </div>
@@ -26,7 +26,7 @@ const NewsList = (props) => {
         })
     }
 
-    return <div className="newsContainer">{showNews}</div>
+    return <>{showNews}</>
 
 }
 export default NewsList

@@ -24,7 +24,7 @@ function App() {
 
 
   return (
-<>
+<div className="app">
       <header>
           <div className="header-title">
             <h1>Your News</h1>
@@ -69,7 +69,7 @@ function App() {
           <Sports />
         </Route>
       </div>
-    </>
+    </div>
   );
 }
 
