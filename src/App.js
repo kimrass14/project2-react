@@ -12,6 +12,9 @@ import Science from './CategoryComponents/Science'
 import Tech from './CategoryComponents/Tech'
 import Entertainment from './CategoryComponents/Entertainment'
 import Sports from './CategoryComponents/Sports'
+import Saved from './Saved/Saved'
+
+export const Context = React.createContext(null)
 
 function App() {
   const [currentDate, setCurrentDate] = useState('')
@@ -22,8 +25,16 @@ function App() {
     setCurrentDate(n)
   }, [])
 
+  const [savedList, setSavedList] = useState([])
+
+  const handleSave = (article) => {
+    setSavedList([...savedList, article])
+    console.log('Saved articles array')
+  }
+
 
   return (
+    <Context.Provider value={{handleSave}}>
 <div className="app">
       <header>
           <div className="header-title">
@@ -43,6 +54,7 @@ function App() {
               </Dropdown.Menu>
             </Dropdown>
             <Link to="/"><h3 className="navtext">Home</h3></Link>
+            <Link to="/saved"><h3 className="navtext">Saved</h3></Link>
           </nav>
       </header>
 
@@ -51,25 +63,29 @@ function App() {
           <Homepage />
         </Route>
         <Route exact path="/business">
-          <Business />
+          <Business/>
         </Route>
         <Route exact path="/health">
-          <Health />
+          <Health/>
         </Route>
         <Route exact path="/science">
-          <Science />
+          <Science/>
         </Route>
         <Route exact path="/tech">
           <Tech />
         </Route>
         <Route exact path="/entertainment">
-          <Entertainment />
+          <Entertainment/>
         </Route>
         <Route exact path="/sports">
-          <Sports />
+          <Sports/>
+        </Route>
+        <Route exact path="/saved">
+          <Saved savedList={savedList}/>
         </Route>
       </div>
     </div>
+    </Context.Provider>
   );
 }
 

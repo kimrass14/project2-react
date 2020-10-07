@@ -3,7 +3,7 @@ import NewsList from '../NewsList/NewsList'
 import RespCatTiles from '../ResponsiveCategory/RespCatTiles'
 
 
-const Business = () => {
+const Business = (props) => {
     const [list, setList] = useState([])
 
     const makeApiCall = async () => {
@@ -24,7 +24,7 @@ const Business = () => {
             <div className="res-cat-container">
                 <RespCatTiles />
                 <div className="cat-list-container">
-                <NewsList list={list}/>
+                <NewsList list={list} />
                 </div>
             </div>
         </>
