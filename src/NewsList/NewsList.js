@@ -8,10 +8,6 @@ const NewsList = (props) => {
         window.open(url, '_blank')
     }
 
-    // React.useEffect(() => {
-    //     handleClick()
-    // }, [])
-
     let showNews = ''
     if (props.list[0]) {
         showNews = props.list.map((item, index) => {

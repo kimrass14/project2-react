@@ -4,31 +4,47 @@
 } */
 
 .res-category-tiles {
-    margin-top: 10px;
-}
-.category-tile {
-    width: 80%;
-    height: 100px;
-    border: solid black;
-    margin-bottom: 5px;
-    background-size: cover;
+    display: none;
+    /* margin-top: 10px; */
 }
 
-#business {
-    background-image: url("https://source.unsplash.com/aId-xYRTlEc");
-}
-#entertainment {
-    background-image: url("https://source.unsplash.com/aId-xYRTlEc");
-}
-#health {
-    background-image: url("https://source.unsplash.com/aId-xYRTlEc");
-}
-#science {
-    background-image: url("https://source.unsplash.com/aId-xYRTlEc");
-}
-#sports {
-    background-image: url("https://source.unsplash.com/aId-xYRTlEc");
-}
-#tech {
-    background-image: url("https://source.unsplash.com/aId-xYRTlEc");
+@media (min-width: 1024px) {
+    .res-category-tiles {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .category-tile {
+        width: 80%;
+        height: 100px;
+        border: solid black;
+        margin-bottom: 5px;
+        background-size: cover;
+    }
+
+    #business {
+        background-image: url("https://source.unsplash.com/E7RLgUjjazc");
+    }
+    #entertainment {
+        background-image: url("https://source.unsplash.com/nLUb9GThIcg");
+    }
+    #health {
+        background-image: url("https://source.unsplash.com/yo01Z-9HQAw");
+    }
+    #science {
+        background-image: url("https://source.unsplash.com/OgvqXGL7XO4");
+    }
+    #sports {
+        background-image: url("https://source.unsplash.com/bYvo2ol_img");
+    }
+    #tech {
+        background-image: url("https://source.unsplash.com/m_HRfLhgABo");
+    }
+
+    .category-tile p {
+        color: white;
+        font-weight: 700;
+        background-color: black;
+    }
+
 }
