@@ -1,8 +1,8 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import {Link, Route} from 'react-router-dom'
+import { Link, Route } from 'react-router-dom'
 
-import { Navbar, Nav, Dropdown} from 'react-bootstrap'
+import { Dropdown } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import Homepage from './CategoryComponents/Homepage'
@@ -13,6 +13,7 @@ import Tech from './CategoryComponents/Tech'
 import Entertainment from './CategoryComponents/Entertainment'
 import Sports from './CategoryComponents/Sports'
 import Saved from './Saved/Saved'
+import Search from './Search/Search'
 
 export const Context = React.createContext(null)
 
@@ -28,15 +29,36 @@ function App() {
   const [savedList, setSavedList] = useState([])
 
   const handleSave = (article) => {
-    setSavedList([...savedList, article])
-    console.log('Saved articles array')
+  // trying to have button remove article if bookmarked clicked again
+    console.log('article', {...article})
+
+    const newSaved = [...savedList]
+    console.log('newSaved', newSaved)
+
+    const articleIndex = newSaved.indexOf(article)
+    console.log('article index', articleIndex)
+
+    if (articleIndex >= 0) {
+      newSaved.splice(articleIndex, 1)
+    } else {
+      newSaved.push(article)
+    }
+    setSavedList(newSaved)
+    // setSavedList([...savedList, article])
+    // console.log('Saved articles array', savedList)
+  }
+
+  const handleRemove = (article) => {
+
   }
 
 
+
+
   return (
-    <Context.Provider value={{handleSave}}>
-<div className="app">
-      <header>
+    <Context.Provider value={{ handleSave }}>
+      <div className="app">
+        <header>
           <div className="header-title">
             <h1>Your News</h1>
             <h2>{currentDate}</h2>
@@ -45,46 +67,50 @@ function App() {
             <Dropdown>
               <Dropdown.Toggle variant="gray-dark" id="dropdown-basic">Category</Dropdown.Toggle>
               <Dropdown.Menu>
-              <Dropdown.Item as={Link} to="/business" href="#/action-1">Business</Dropdown.Item>
-              <Dropdown.Item as={Link} to="/health" href="#/action-2">Health</Dropdown.Item>
-              <Dropdown.Item as={Link} to="/science" href="#/action-3">Science</Dropdown.Item>
-              <Dropdown.Item as={Link} to="/tech" href="#/action-3">Tech</Dropdown.Item>
-              <Dropdown.Item as={Link} to="/entertainment" href="#/action-3">Entertainment</Dropdown.Item>
-              <Dropdown.Item as={Link} to="/sports" href="#/action-3">Sports</Dropdown.Item>
+                <Dropdown.Item as={Link} to="/business" href="#/action-1">Business</Dropdown.Item>
+                <Dropdown.Item as={Link} to="/health" href="#/action-2">Health</Dropdown.Item>
+                <Dropdown.Item as={Link} to="/science" href="#/action-3">Science</Dropdown.Item>
+                <Dropdown.Item as={Link} to="/tech" href="#/action-3">Tech</Dropdown.Item>
+                <Dropdown.Item as={Link} to="/entertainment" href="#/action-3">Entertainment</Dropdown.Item>
+                <Dropdown.Item as={Link} to="/sports" href="#/action-3">Sports</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
             <Link to="/"><h3 className="navtext">Home</h3></Link>
             <Link to="/saved"><h3 className="navtext">Saved</h3></Link>
+            {/* <Link to="/search"><h3 className="navtext">Search</h3></Link> */}
           </nav>
-      </header>
+        </header>
 
-      <div className="main">
-        <Route exact path="/">
-          <Homepage />
-        </Route>
-        <Route exact path="/business">
-          <Business/>
-        </Route>
-        <Route exact path="/health">
-          <Health/>
-        </Route>
-        <Route exact path="/science">
-          <Science/>
-        </Route>
-        <Route exact path="/tech">
-          <Tech />
-        </Route>
-        <Route exact path="/entertainment">
-          <Entertainment/>
-        </Route>
-        <Route exact path="/sports">
-          <Sports/>
-        </Route>
-        <Route exact path="/saved">
-          <Saved savedList={savedList}/>
-        </Route>
+        <div className="main">
+          <Route exact path="/">
+            <Homepage />
+          </Route>
+          <Route exact path="/business">
+            <Business />
+          </Route>
+          <Route exact path="/health">
+            <Health />
+          </Route>
+          <Route exact path="/science">
+            <Science />
+          </Route>
+          <Route exact path="/tech">
+            <Tech />
+          </Route>
+          <Route exact path="/entertainment">
+            <Entertainment />
+          </Route>
+          <Route exact path="/sports">
+            <Sports />
+          </Route>
+          <Route exact path="/saved">
+            <Saved savedList={savedList} />
+          </Route>
+          {/* <Route exact path="/search">
+            <Search />
+          </Route> */}
+        </div>
       </div>
-    </div>
     </Context.Provider>
   );
 }

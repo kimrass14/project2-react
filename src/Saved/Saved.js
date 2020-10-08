@@ -1,25 +1,34 @@
-import React, {useState} from 'react'
-import NewsList from '../NewsList/NewsList'
+import React from 'react'
+import './save.css'
 
-const Saved = () => {
-    // const [savedList, setSavedList] = useState([])
+const Saved = (props) => {
+    console.log('Saved', props)
 
-    // const handleSave = (article) => {
-    //     savedList.push(article)
-    //     console.log('Saved articles array', savedList)
-    // }
+    const handleSaveClick = (url) => {
+        window.open(url, '_blank')
+    }
 
+    let showSaved = ''
+    if(props.savedList[0]) {
+        showSaved = props.savedList.map((item, index) => {
+            return (
+                <div className="saved-preview" key={index}>
+                    <img className="saved-image" onClick={() => { handleSaveClick(item.url) }} src={item.urlToImage !== null ? item.urlToImage : "https://source.unsplash.com/aId-xYRTlEc"} alt="newsimage" />
+                    <p className="saved-title">{item.title}</p>
+                    <button className="unsave">Remove</button>
+                </div>
+            )
+        })
+    } else {
+        return <div className="no-articles">No articles bookmarked</div>
+    }
 
-
-    
-    //need to receive new array of bookmarked articles
-    //map over new array
-    //create news listing
-    
-    return(
+    return (
         <>
-        <div>Saved Articles Here</div>
-            {/* <NewsList handleSave={handleSave}/> */}
+            <h4>Saved Articles Here</h4>
+            <div className="saved-list-container">
+                {showSaved}
+            </div>
         </>
     )
 }
