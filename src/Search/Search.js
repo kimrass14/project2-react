@@ -5,6 +5,19 @@ const Search = () => {
     const [search, setSearch] = useState("")
     const [newsData, setNewsData] = useState([])
 
+    const handleChange = (event) => {
+        setSearch(event.target.value)
+    }
+
+    let something = (blah) => {
+        getNews(blah)
+    }
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        something(search)
+    }
+    // WHY COULDNT I DO GETNEW(SEARCH) IN THE HANDLE SUBMIT FUNCTION?
+
     const getNews = async (keyword) => {
         const res = await fetch(`https://newsapi.org/v2/everything?q=${keyword}&apiKey=55b8ac4b6e5941b4b92ffeaa3700fe53`)
         const json = await res.json()
@@ -12,22 +25,15 @@ const Search = () => {
         setNewsData(newsArr)
         console.log('newsData', newsData)
     }
-    React.useEffect(() => {
-        getNews()
-    }, [])
-
-
-
-    const handleChange = (event) => {
-        setSearch(event.target.value)
+    
+    let showNews = ''
+    if (newsData[0]) {
+        showNews = (
+            <div className="cat-list-container">
+                <NewsList list={newsData} />
+            </div>
+        )
     }
-
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        getNews(event)
-        console.log('handlesubmit', search)
-    }
-
 
     return (
         <>
@@ -45,10 +51,7 @@ const Search = () => {
                     value="Search"
                 />
             </form>
-{/* CONDITIONAL RENDERING ON NEWSLIST?? */}
-            <div className="cat-list-container">
-                <NewsList list={newsData} />
-            </div>
+            {showNews}
         </>
     )
 }
