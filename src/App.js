@@ -29,31 +29,39 @@ function App() {
   const [savedList, setSavedList] = useState([])
 
   const handleSave = (article) => {
-  // trying to have button remove article if bookmarked clicked again
-    console.log('article', {...article})
+    ///// trying to have button remove article if bookmarked clicked again////
+    // console.log('article', {...article})
 
-    const newSaved = [...savedList]
-    console.log('newSaved', newSaved)
+    // const newSaved = [...savedList]
+    // console.log('newSaved', newSaved)
 
-    const articleIndex = newSaved.indexOf(article)
+    // let articleIndex = newSaved.indexOf(article)
+    // console.log('article index', articleIndex)
+
+    // if (articleIndex >= 0) {
+    //   newSaved.splice(articleIndex, 1)
+    // } else {
+    //   newSaved.push(article)
+    // }
+    // setSavedList(newSaved)
+
+    setSavedList([...savedList, article])
+    console.log('Saved articles array', savedList)
+  }
+
+  ///REMOVES SAVED ARTICLE ON CLICK OF BUTTON - I DID IT!!!!////
+  const handleRemove = (article) => {
+    const updatedSaved = [...savedList]
+    console.log('saved - article props', article)
+
+    let articleIndex = updatedSaved.indexOf(article)
     console.log('article index', articleIndex)
 
     if (articleIndex >= 0) {
-      newSaved.splice(articleIndex, 1)
-    } else {
-      newSaved.push(article)
+      updatedSaved.splice(articleIndex, 1)
     }
-    setSavedList(newSaved)
-    // setSavedList([...savedList, article])
-    // console.log('Saved articles array', savedList)
+    setSavedList(updatedSaved)
   }
-
-  const handleRemove = (article) => {
-
-  }
-
-
-
 
   return (
     <Context.Provider value={{ handleSave }}>
@@ -104,7 +112,7 @@ function App() {
             <Sports />
           </Route>
           <Route exact path="/saved">
-            <Saved savedList={savedList} />
+            <Saved savedList={savedList} handleRemove={handleRemove} />
           </Route>
           {/* <Route exact path="/search">
             <Search />
