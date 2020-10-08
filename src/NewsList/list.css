@@ -26,6 +26,7 @@ img.image {
     display: none;
 }
 
+
 @media (min-width: 768px) {
     .preview {
         height: 150px;

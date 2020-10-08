@@ -1,9 +1,11 @@
 import React from 'react'
 import { Context } from '../App'
 import './list.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faGhost} from '@fortawesome/free-solid-svg-icons'
 
 const NewsList = (props) => {
-    console.log('newslist props', props)
+    // console.log('newslist props', props)
 
     const ctx = React.useContext(Context)
 
@@ -23,7 +25,7 @@ const NewsList = (props) => {
                         <p className="title">{item.title}</p>
                         {/* <p className="source">{item.source.name}</p> */}
                         <p className="description">{item.description}</p>
-                        <button onClick={() => { ctx.handleSave(item) }}>Bookmark</button>
+                        <button onClick={() => { ctx.handleSave(item) }}><FontAwesomeIcon icon={faGhost} /></button>
                     </div>
                 </div>
             )

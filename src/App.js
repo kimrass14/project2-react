@@ -30,23 +30,23 @@ function App() {
 
   const handleSave = (article) => {
     ///// trying to have button remove article if bookmarked clicked again////
-    // console.log('article', {...article})
+    console.log('article', {...article})
 
-      // const newSaved = [...savedList]
-      // console.log('newSaved', newSaved)
+      const newSaved = [...savedList]
+      console.log('newSaved', newSaved)
 
-      // let articleIndex = newSaved.indexOf(article)
-      // console.log('article index', articleIndex)
+      let articleIndex = newSaved.findIndex((item) => article.title === item.title)
+      console.log('article index', articleIndex)
 
-      // if (articleIndex >= 0) {
-      //   newSaved.splice(articleIndex, 1)
-      // } else {
-      //   newSaved.push(article)
-      // }
-      // setSavedList(newSaved)
+      if (articleIndex >= 0) {
+        newSaved.splice(articleIndex, 1)
+      } else {
+        newSaved.push(article)
+      }
+      setSavedList(newSaved)
 
-    setSavedList([...savedList, article])
-    console.log('Saved articles array', savedList)
+    // setSavedList([...savedList, article])
+    // console.log('Saved articles array', savedList)
   }
 
   ///REMOVES SAVED ARTICLE ON CLICK OF BUTTON - I DID IT!!!!////
@@ -68,7 +68,7 @@ function App() {
       <div className="app">
         <header>
           <div className="header-title">
-            <h1>Your News</h1>
+            <h1>The Scary Truth</h1>
             <h2>{currentDate}</h2>
           </div>
           <nav className="navContainer">
@@ -83,9 +83,9 @@ function App() {
                 <Dropdown.Item as={Link} to="/sports" href="#/action-3">Sports</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            <Link to="/"><h3 className="navtext">Home</h3></Link>
-            <Link to="/saved"><h3 className="navtext">Saved</h3></Link>
-            <Link to="/search"><h3 className="navtext">Search</h3></Link>
+            <Link to="/"><h3 className="navtext">Haunted House</h3></Link>
+            <Link to="/saved"><h3 className="navtext">Reeses</h3></Link>
+            <Link to="/search"><h3 className="navtext">Trick-or-Treat</h3></Link>
           </nav>
         </header>
 

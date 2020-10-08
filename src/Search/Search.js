@@ -9,12 +9,13 @@ const Search = () => {
         setSearch(event.target.value)
     }
 
-    let something = (blah) => {
-        getNews(blah)
-    }
+    // let something = (blah) => {
+    //     getNews(blah)
+    // }
     const handleSubmit = (event) => {
         event.preventDefault()
-        something(search)
+        getNews(search)
+        // something(search)
     }
     // WHY COULDNT I DO GETNEW(SEARCH) IN THE HANDLE SUBMIT FUNCTION?
 
@@ -25,7 +26,7 @@ const Search = () => {
         setNewsData(newsArr)
         console.log('newsData', newsData)
     }
-    
+
     let showNews = ''
     if (newsData[0]) {
         showNews = (

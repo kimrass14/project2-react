@@ -10,11 +10,12 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 10px 15px;
-  background-color: #00A896;
+  background-color: #3F1D33;
 
 }
 
 header h1 {
+  color: #B9B6B6;
   font-size: 30px;
   font-weight: 700;
   margin: 0;
@@ -27,7 +28,7 @@ header h2 {
 
 .navContainer {
   width: 100%;
-  background-color: #00A896;
+  background-color: #3F1D33;
   padding: 0px 15px 10px 15px;
   display: flex;
   position: fixed;
@@ -37,11 +38,14 @@ header h2 {
 }
 
 h3.navtext {
-  color: black;
+  color: #B14723;
+  font-weight: 700;
   font-size: 20px;
-  margin: 0 20px 0 20px;
+  margin: 0 10px 0 10px;
 }
 .navContainer .btn {
+  color: #B14723;
+  font-weight: 700;
   font-size: 20px;
   padding: 0;
 }

@@ -21,7 +21,7 @@ const Homepage = () => {
 
     return(
         <>
-            <h4>Top Headlines</h4>
+            <h4>The Headlines</h4>
             <div className="res-cat-container">
                 <RespCatTiles />
                 <div className="cat-list-container">
