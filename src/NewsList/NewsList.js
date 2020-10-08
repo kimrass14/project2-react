@@ -1,8 +1,9 @@
 import React from 'react'
-import {Context} from '../App'
+import { Context } from '../App'
 import './list.css'
 
 const NewsList = (props) => {
+    console.log('newslist props', props)
 
     const ctx = React.useContext(Context)
 

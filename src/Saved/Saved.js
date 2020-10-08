@@ -8,40 +8,6 @@ const Saved = (props) => {
         window.open(url, '_blank')
     }
 
-    ///REMOVE ARTICLE FROM SAVED LIST ON CLICK OF BUTTON////
-        // const handleRemove = (article) => {
-        //     console.log('saved - article props', article)
-
-        //     let articleIndex = props.savedList.indexOf(article)
-        //     console.log('article index', articleIndex)
-
-        //     if (articleIndex >= 0) {
-        //         props.savedList.splice(articleIndex, 1)
-        //         console.log('props.savedList', props.savedList)
-        //     }
-        // }
-    /////////////////
-
-    // const handleRemove = (article) => {
-    //     console.log('props savedList', props.savedList[0].title)
-    // console.log('showSaved[i]', showSaved[0].title)
-    // console.log('article title prop', article.title)
-
-    // for (let i = 0; i < props.savedList.length; i++) {
-    //     if (props.savedList[i].title == article.title) {
-
-    //         console.log('match')
-    //         return i;
-    //     }
-    // } console.log('dont match')
-    // return -1;
-    // }
-    // if(handleRemove() >= 0) {
-    //     console.log('remove')
-    // }
-
-
-
     let showSaved = ''
     if (props.savedList[0]) {
         showSaved = props.savedList.map((item, index) => {

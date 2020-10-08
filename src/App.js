@@ -32,18 +32,18 @@ function App() {
     ///// trying to have button remove article if bookmarked clicked again////
     // console.log('article', {...article})
 
-    // const newSaved = [...savedList]
-    // console.log('newSaved', newSaved)
+      // const newSaved = [...savedList]
+      // console.log('newSaved', newSaved)
 
-    // let articleIndex = newSaved.indexOf(article)
-    // console.log('article index', articleIndex)
+      // let articleIndex = newSaved.indexOf(article)
+      // console.log('article index', articleIndex)
 
-    // if (articleIndex >= 0) {
-    //   newSaved.splice(articleIndex, 1)
-    // } else {
-    //   newSaved.push(article)
-    // }
-    // setSavedList(newSaved)
+      // if (articleIndex >= 0) {
+      //   newSaved.splice(articleIndex, 1)
+      // } else {
+      //   newSaved.push(article)
+      // }
+      // setSavedList(newSaved)
 
     setSavedList([...savedList, article])
     console.log('Saved articles array', savedList)
@@ -85,7 +85,7 @@ function App() {
             </Dropdown>
             <Link to="/"><h3 className="navtext">Home</h3></Link>
             <Link to="/saved"><h3 className="navtext">Saved</h3></Link>
-            {/* <Link to="/search"><h3 className="navtext">Search</h3></Link> */}
+            <Link to="/search"><h3 className="navtext">Search</h3></Link>
           </nav>
         </header>
 
@@ -114,9 +114,9 @@ function App() {
           <Route exact path="/saved">
             <Saved savedList={savedList} handleRemove={handleRemove} />
           </Route>
-          {/* <Route exact path="/search">
+          <Route exact path="/search">
             <Search />
-          </Route> */}
+          </Route>
         </div>
       </div>
     </Context.Provider>
