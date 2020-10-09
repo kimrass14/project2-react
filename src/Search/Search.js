@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import NewsList from '../NewsList/NewsList'
 import './search.css'
 
@@ -10,22 +10,16 @@ const Search = () => {
         setSearch(event.target.value)
     }
 
-    // let something = (blah) => {
-    //     getNews(blah)
-    // }
     const handleSubmit = (event) => {
         event.preventDefault()
         getNews(search)
-        // something(search)
     }
-    // WHY COULDNT I DO GETNEW(SEARCH) IN THE HANDLE SUBMIT FUNCTION?
 
     const getNews = async (keyword) => {
         const res = await fetch(`https://newsapi.org/v2/everything?q=${keyword}&apiKey=55b8ac4b6e5941b4b92ffeaa3700fe53`)
         const json = await res.json()
         const newsArr = json.articles
         setNewsData(newsArr)
-        console.log('newsData', newsData)
     }
 
     let showNews = ''

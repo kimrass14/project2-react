@@ -29,14 +29,11 @@ function App() {
   const [savedList, setSavedList] = useState([])
 
   const handleSave = (article) => {
-    ///// trying to have button remove article if bookmarked clicked again////
-    console.log('article', {...article})
+    //onClick of article preview bookmark icon saves article. If click same article again, removes it from saved list.
 
       const newSaved = [...savedList]
-      console.log('newSaved', newSaved)
 
       let articleIndex = newSaved.findIndex((item) => article.title === item.title)
-      console.log('article index', articleIndex)
 
       if (articleIndex >= 0) {
         newSaved.splice(articleIndex, 1)
@@ -45,17 +42,15 @@ function App() {
       }
       setSavedList(newSaved)
 
+    //CODE if button only saved article:
     // setSavedList([...savedList, article])
-    // console.log('Saved articles array', savedList)
   }
 
-  ///REMOVES SAVED ARTICLE ON CLICK OF BUTTON - I DID IT!!!!////
+  //In Saved component, onClick of button removes article from list
   const handleRemove = (article) => {
     const updatedSaved = [...savedList]
-    console.log('saved - article props', article)
 
     let articleIndex = updatedSaved.indexOf(article)
-    console.log('article index', articleIndex)
 
     if (articleIndex >= 0) {
       updatedSaved.splice(articleIndex, 1)
@@ -71,7 +66,7 @@ function App() {
             <h1>Your News</h1>
             <h2>{currentDate}</h2>
           </div>
-          <nav className="navContainer">
+          <nav className="nav-container">
             <Dropdown>
               <Dropdown.Toggle variant="gray-dark" id="dropdown-basic">Category</Dropdown.Toggle>
               <Dropdown.Menu>

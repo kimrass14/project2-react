@@ -1,11 +1,5 @@
-/* .res-category-tiles a {
-    width: 80px;
-    height: 80px;
-} */
-
 .res-category-tiles {
     display: none;
-    /* margin-top: 10px; */
 }
 
 @media (min-width: 1024px) {
@@ -44,7 +38,7 @@
     .category-tile p {
         color: black;
         font-weight: 700;
-        background-color: #F7A072;
+        background-color: #FF9B42;
         padding-left: 5px;
     }
 

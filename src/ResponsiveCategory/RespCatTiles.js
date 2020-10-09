@@ -9,19 +9,19 @@ const RespCatTiles = () => {
             <Link to="/business">
                 <div className="category-tile" id="business">
                     <p>Business</p>
-                    </div>
+                </div>
             </Link>
             <Link to="/entertainment">
                 <div className="category-tile" id="entertainment">
                     <p>Entertainment</p>
                 </div>
             </Link>
-            <Link to="/Health">
+            <Link to="/health">
                 <div className="category-tile" id="health">
                     <p>Health</p>
                 </div>
             </Link>
-            <Link to="/Science">
+            <Link to="/science">
                 <div className="category-tile" id="science">
                     <p>Science</p>
                 </div>

@@ -27,8 +27,8 @@ img.saved-image {
     position: absolute;
     top: 0;
     left: 0;
-    color: #05668D;
-    border-color: #05668D;
+    /* color: #05668D; */
+    background-color: #FF9B42;
 }
 
 @media (min-width: 768px) {

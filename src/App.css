@@ -5,16 +5,13 @@ header {
   position: fixed;
   top: 0;
   z-index: 2;
-  /* why is height only including header-title and not navContainer? */
 }
 .header-title {
   display: flex;
   justify-content: space-between;
   padding: 10px 15px;
   background-color: #00A896;
-
 }
-
 header h1 {
   color: #05668d;
   font-size: 30px;
@@ -27,7 +24,7 @@ header h2 {
   align-self: center;
 }
 
-.navContainer {
+.nav-container {
   width: 100%;
   background-color: #00A896;
   padding: 0px 15px 10px 15px;
@@ -36,7 +33,7 @@ header h2 {
   position: fixed;
   z-index: 2;
 }
-.navContainer a {
+.nav-container a {
   align-self: center;
 }
 
@@ -46,7 +43,7 @@ h3.navtext {
   font-size: 20px;
   margin: 0 10px 0 10px;
 }
-.navContainer .btn {
+.nav-container .btn {
   color: #05668D;
   font-weight: 700;
   font-size: 20px;
@@ -57,8 +54,6 @@ h3.navtext {
   margin-left: 5%;
   margin-right: 5%;
   font-family: 'PT Sans Narrow', sans-serif;
-  /* background-color: #e5e5e5; */
-  /* z-index: -1; */
 }
 
 @media (min-width: 768px) {
@@ -71,7 +66,7 @@ h3.navtext {
   h3.navtext {
     font-size: 25px;
   }
-  .navContainer .btn {
+  .nav-container .btn {
     font-size: 25px;
   }
   .main {
@@ -82,8 +77,7 @@ h3.navtext {
   div.dropdown {
     display: none;
   }
-
-  .navContainer {
+  .nav-container {
     justify-content: center;
   }
   h3.navtext {

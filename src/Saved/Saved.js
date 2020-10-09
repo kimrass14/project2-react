@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 const Saved = (props) => {
-    console.log('Saved', props)
 
     const handleSaveClick = (url) => {
         window.open(url, '_blank')
@@ -22,7 +21,7 @@ const Saved = (props) => {
             )
         })
     } else {
-        return <h4>Uh oh, nothing bookmarked</h4>
+        return <h4>uh oh. . . .nothing bookmarked</h4>
     }
 
     return (
