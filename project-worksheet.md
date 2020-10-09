@@ -102,7 +102,7 @@ I developed a news app that provides a variety of up to date news to the user. U
 
 
 | Component | Priority | Estimated Time | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
+| --- | :---: |  :---: | :---: |
 | Creating structure of components and linking | H | 2hrs| .5hrs |
 | Navigation bar | H | 3hrs | 2.75hrs |
 | Homepage component | H | 1hr | .5hrs |
@@ -113,10 +113,10 @@ I developed a news app that provides a variety of up to date news to the user. U
 | Sports component | H | 1hr| .25hrs |
 | Tech component | H | 1hr| .25hrs |
 | NewsListings component | H | 2hr| 2.1hrs |
-| Saved component | H | 2hr| 4.5hrs |
-| Search component | H | 2hr| 2.1hrs |
+| Saved component | L | 2hr| 4.5hrs |
+| Search component | L | 2hr| 2.1hrs |
 | Responsiveness from mobile to laptop | H | 3hrs| 4.6hrs |
-| Styling | H | 4hrs | 4.75hrs |
+| Styling | M | 4hrs | 4.75hrs |
 | Deploying and setup | H | 0hrs| 1.5hrs |
 | Code clean up and worksheet | H | 0hrs| 2hrs |
 | Total | H | 25hrs | 25.8hrs |
@@ -129,7 +129,10 @@ I developed a news app that provides a variety of up to date news to the user. U
 ## Code Snippet
 
 ```
-//onClick of article preview bookmark icon saves article. If click same article again, removes it from saved list. The array.indexOf() tests if the item and items in array are EXACTLY the same and therefore it will not recognize when you are comparing objects. Needed to find the index of the article clicked on, so used array.findIndex() and compared just the title to find and exact match and then return the object index in the array.
+//onClick of article preview bookmark icon saves article. If click same article again, removes it from saved list. 
+The array.indexOf() tests if the item and items in array are EXACTLY the same and therefore it will not recognize 
+when you are comparing objects. Needed to find the index of the article clicked on, so used array.
+findIndex() and compared just the title to find and exact match and then return the object index in the array.
  const handleSave = (article) => {
 
       const newSaved = [...savedList]
