@@ -3,11 +3,11 @@
 ## Project Links
 
 - [My github repo link](https://github.com/kimrass14/project2-react)
-- [My netlify link](https://project-2-react.netlify.app/)
+- [My netlify link](https://project-2-react.netlify.app/) Lesson learned: the free version of the News API is only available locally and is not deployable.
 
 ## Project Description
 
-I want to develop a news app that will allow users to see headlines upon inital opening of page. Users can browse article previews and bookmark them to read later. They can also browse articles by different categories such as general news, business, entertainment, health, science, sports and tech.
+I developed a news app that provides a variety of up to date news to the user. Upon initially opening the app, the user will see a preview of the headlines for that day. Users can also view a listing of articles by category (i.e. health, sports, business, etc.) or do a keyword search for a specific topic. At any point the user can click on the preview to go to the full article in a new tab. As the user browses the article previews they can click the bookmark icon which saves the article to read later and are aggregated on the Saved page. If the user changes their mind about bookmarking the article, they can click the bookmark icon again and it will be removed from the Saved articles list. When the user is ready to read their saved articles, they can navigate to the Saved page and click on the preview which directs them to the full article. Once they have read the article, an 'x' button can be clicked to remove it from the Saved list.
 
 ## API
 
@@ -24,6 +24,8 @@ I want to develop a news app that will allow users to see headlines upon inital 
 [News API - US Sports link](https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=55b8ac4b6e5941b4b92ffeaa3700fe53)
 
 [News API - US Tech link](https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=55b8ac4b6e5941b4b92ffeaa3700fe53)
+
+[News API - by keywork link (keyword example: chicago)](https://newsapi.org/v2/everything?q=chicago&apiKey=55b8ac4b6e5941b4b92ffeaa3700fe53)
 
 ```
 {
@@ -61,16 +63,11 @@ I want to develop a news app that will allow users to see headlines upon inital 
 
 ## Wireframes
 
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
-
 - [Mobile wireframes](https://res.cloudinary.com/dzxytz23k/image/upload/v1601663309/SEI%20-%20Project%202/IMG-3794_so8m9z.jpg)
+	- The header / navigation bar is fixed to the top in all views. Each view provides a listing of the articles in a preview form. The preview shows the image and title from the API. Upon clicking the preview, the user is redirected to the full article on another tab. The preview also has a button that can be clicked to save the article. A dropdown menu is in the nav bar to view news by different categories. There is also a Saved component that has a form with an input field and button to search keywords within the API returning related articles.
 - [Laptop wireframe](https://res.cloudinary.com/dzxytz23k/image/upload/v1601663309/SEI%20-%20Project%202/IMG-3795_idmfjl.jpg)
-- [Architecture](https://docs.google.com/drawings/d/1iy7YauR9sp2b4lV-bjIHMD1sanXL0K9Yw-xD2r5Xfxc/edit?usp=sharing)
-
-
-### MVP/PostMVP - 5min
-
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
+	- The same functionality as the mobile view. Use grid or flex to include more article previews in the width of the page. The previews also include a brief description of the article. The categories are image buttons along the left side of the page instead of in the nav bar dropdown.
+- [Architecture](https://docs.google.com/drawings/d/1iy7YauR9sp2b4lV-bjIHMD1sanXL0K9Yw-xD2r5Xfxc/edit?usp=sharing) 
 
 #### MVP
 - Confirm retrieval of API data
@@ -88,53 +85,69 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Saved articles component renders listing of bookmarked articles
 
 ## Components
-##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
-
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
 
 | Component | Description | 
 | --- | :---: |  
-| App | This will be the parent component to the seven category components and homepage component. Will contain navigation bar.|
+| App | This will be the parent component to the category components, homepage component, search and saved components. Will contain navigation bar.|
 | Homepage | Stateful and fetch headline news API |
 | Business | Stateful and fetch business news API | 
 | Entertainment | Stateful and fetch entertainment news API |
 | Health | Stateful and fetch health news API | 
 | Science | Stateful and fetch science news API |
 | Sports | Stateful and fetch sports news API | 
-| Tech | Stateful and fetch tech news API | 
-| NewsListing | Stateful and renders listing of article previews based on which category is clicked on |
-| Tile | Stateful and renders preview of individual article, including image, title and source |
-| Article | Stateful and renders the full article of tile that was clicked on| 
+| Tech | Stateful and fetch tech news API |
+| Search | Stateful and fetches news API based on keyword input into search form |  
+| NewsListing | Stateful and renders listing of article previews based on which category and search is submitted |
+| Saved | Stateful and maintains list of articles saved |
 
 
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Creating structure of components and linking | H | 2hrs| hrs | hrs |
-| Navigation bar | H | 3hrs| hrs | hrs |
-| Homepage component | H | 1hr| hrs | hrs |
-| Business component | H | 1hr| hrs | hrs |
-| Entertainment component | H | 1hr| hrs | hrs |
-| Health component | H | 1hr| hrs | hrs |
-| Science component | H | 1hr| hrs | hrs |
-| Sports component | H | 1hr| hrs | hrs |
-| Tech component | H | 1hr| hrs | hrs |
-| NewsListings component | H | 2hr| hrs | hrs |
-| Tile component | H | 2hr| hrs | hrs |
-| Article component | H | 2hr| hrs | hrs |
-| onClick of categories rendering news list extra time | H | 2hr| hrs | hrs |
-| Responsiveness from mobile to laptop | H | 3hrs| hrs | hrs |
-| Styling | H | 4hrs| hrs | hrs |
-| Total | H | 27hrs| hrs | hrs |
+| Creating structure of components and linking | H | 2hrs| .5hrs |
+| Navigation bar | H | 3hrs | 2.75hrs |
+| Homepage component | H | 1hr | .5hrs |
+| Business component | H | 1hr| .25hrs |
+| Entertainment component | H | 1hr| .25hrs |
+| Health component | H | 1hr| .25hrs |
+| Science component | H | 1hr| .25hrs |
+| Sports component | H | 1hr| .25hrs |
+| Tech component | H | 1hr| .25hrs |
+| NewsListings component | H | 2hr| 2.1hrs |
+| Saved component | H | 2hr| 4.5hrs |
+| Search component | H | 2hr| 2.1hrs |
+| Responsiveness from mobile to laptop | H | 3hrs| 4.6hrs |
+| Styling | H | 4hrs | 4.75hrs |
+| Deploying and setup | H | 0hrs| 1.5hrs |
+| Code clean up and worksheet | H | 0hrs| 2hrs |
+| Total | H | 25hrs | 25.8hrs |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
+  - Bootstrap: dropdown menu in nav bar to select different categories
+  - Font Awesome: for icon buttons saving articles and removing articles from list
+  - Router: to create links and routes for components
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code. 
-
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+//onClick of article preview bookmark icon saves article. If click same article again, removes it from saved list. The array.indexOf() tests if the item and items in array are EXACTLY the same and therefore it will not recognize when you are comparing objects. Needed to find the index of the article clicked on, so used array.findIndex() and compared just the title to find and exact match and then return the object index in the array.
+ const handleSave = (article) => {
+
+      const newSaved = [...savedList]
+      let articleIndex = newSaved.findIndex((item) => article.title === item.title)
+
+      if (articleIndex >= 0) {
+        newSaved.splice(articleIndex, 1)
+      } else {
+        newSaved.push(article)
+      }
+      setSavedList(newSaved)
+
+//Shows the current date - so simple, but it took me a while to figure out!
+const [currentDate, setCurrentDate] = useState('')
+
+  React.useEffect(() => {
+    let d = new Date();
+    let n = d.toDateString();
+    setCurrentDate(n)
+  }, [])
 ```
