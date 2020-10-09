@@ -1,5 +1,7 @@
 h4 {
     text-align: center;
+    background-color: #05668d;
+    color: white;
 }
 
 @media (min-width: 768px) {
@@ -9,10 +11,14 @@ h4 {
     .cat-list-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        justify-items: center;
     }
 }
 
 @media (min-width: 1024px) {
+    h4 {
+        font-size: 40px;
+    }
     .res-cat-container {
         display: grid;
         grid-template-columns: 25% 75%;

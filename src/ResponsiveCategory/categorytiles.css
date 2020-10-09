@@ -42,9 +42,10 @@
     }
 
     .category-tile p {
-        color: white;
+        color: black;
         font-weight: 700;
-        background-color: black;
+        background-color: #F7A072;
+        padding-left: 5px;
     }
 
 }

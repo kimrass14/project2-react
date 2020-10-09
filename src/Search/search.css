@@ -1,0 +1,11 @@
+form {
+    margin: 20px 0;
+}
+.keyword-input {
+    margin-right: 10px;
+}
+
+.search-button {
+    background-color: #F7A072;
+    border-radius: 5px;
+}

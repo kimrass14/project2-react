@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import NewsList from '../NewsList/NewsList'
+import './search.css'
 
 const Search = () => {
     const [search, setSearch] = useState("")
@@ -38,18 +39,20 @@ const Search = () => {
 
     return (
         <>
-            <h4>Search Results</h4>
+            <h4>what are you looking for?</h4>
             <form onSubmit={handleSubmit}>
                 <input
                     id="keyword"
                     onChange={handleChange}
                     value={search}
                     type="text"
-                    placeholder="Search"
+                    placeholder="Put it here"
+                    className="keyword-input"
                 />
                 <input
                     type="submit"
-                    value="Search"
+                    value="Lets see!"
+                    className="search-button"
                 />
             </form>
             {showNews}

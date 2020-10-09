@@ -68,7 +68,7 @@ function App() {
       <div className="app">
         <header>
           <div className="header-title">
-            <h1>The Scary Truth</h1>
+            <h1>Your News</h1>
             <h2>{currentDate}</h2>
           </div>
           <nav className="navContainer">
@@ -83,9 +83,9 @@ function App() {
                 <Dropdown.Item as={Link} to="/sports" href="#/action-3">Sports</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            <Link to="/"><h3 className="navtext">Haunted House</h3></Link>
-            <Link to="/saved"><h3 className="navtext">Reeses</h3></Link>
-            <Link to="/search"><h3 className="navtext">Trick-or-Treat</h3></Link>
+            <Link to="/"><h3 className="navtext">Headlines</h3></Link>
+            <Link to="/saved"><h3 className="navtext">Saved</h3></Link>
+            <Link to="/search"><h3 className="navtext">Search</h3></Link>
           </nav>
         </header>
 
