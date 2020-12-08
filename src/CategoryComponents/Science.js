@@ -5,8 +5,10 @@ import RespCatTiles from '../ResponsiveCategory/RespCatTiles'
 const Science = () => {
     const [list, setList] = useState([])
 
+    const apiKey = process.env.REACT_APP_GNEWS_API_KEY
+
     const makeApiCall = async () => {
-        const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=55b8ac4b6e5941b4b92ffeaa3700fe53`)
+        const res = await fetch(`https://gnews.io/api/v4/top-headlines?topic=science&token=${apiKey}&lang=en`)
         const json = await res.json()
         const newsArr = json.articles
         setList(newsArr)
