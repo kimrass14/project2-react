@@ -18,7 +18,7 @@ const NewsList = (props) => {
 
             return (
                 <div className="preview" key={index} >
-                    <img className="image" onClick={() => { handleClick(item.url) }} src={item.urlToImage !== null ? item.urlToImage : "https://source.unsplash.com/aId-xYRTlEc"} alt="newsimage" />
+                    <img className="image" onClick={() => { handleClick(item.url) }} src={item.image !== null ? item.image : "https://source.unsplash.com/aId-xYRTlEc"} alt="newsimage" />
                     <div className="article-info">
                         <p className="title">{item.title}</p>
                         <p className="description">{item.description}</p>

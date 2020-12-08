@@ -14,7 +14,7 @@ const Saved = (props) => {
         showSaved = props.savedList.map((item, index) => {
             return (
                 <div className="saved-preview" key={index}>
-                    <img className="saved-image" onClick={() => { handleSaveClick(item.url) }} src={item.urlToImage !== null ? item.urlToImage : "https://source.unsplash.com/aId-xYRTlEc"} alt="newsimage" />
+                    <img className="saved-image" onClick={() => { handleSaveClick(item.url) }} src={item.image !== null ? item.image : "https://source.unsplash.com/aId-xYRTlEc"} alt="newsimage" />
                     <p className="saved-title">{item.title}</p>
                     <button className="unsave" onClick={() => { props.handleRemove(item) }}><FontAwesomeIcon icon={faTimesCircle} /></button>
                 </div>

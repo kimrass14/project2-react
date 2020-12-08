@@ -15,8 +15,10 @@ const Search = () => {
         getNews(search)
     }
 
+    const apiKey = process.env.REACT_APP_GNEWS_API_KEY
+
     const getNews = async (keyword) => {
-        const res = await fetch(`https://newsapi.org/v2/everything?q=${keyword}&apiKey=55b8ac4b6e5941b4b92ffeaa3700fe53`)
+        const res = await fetch(`https://gnews.io/api/v4/search?q=${keyword}&token=${apiKey}&lang=en`)
         const json = await res.json()
         const newsArr = json.articles
         setNewsData(newsArr)
